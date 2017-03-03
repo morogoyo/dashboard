@@ -1,5 +1,5 @@
 <?php
-include('../classes/class.pulse.php');
+// include('classes/class.pulse.php');
 
 class Sql {
 
@@ -99,13 +99,65 @@ function insert_acronyms(){
 					}
 
 
+			
+		}
+	}
+
+
+
+function update_sql($table, $column, $input, $id ){
+
+		global $conn;
+		$this->table 	= $table;
+		$this->column 	= $column;
+		$this->input 	= $input; 
+		$this->id 		= $id;
+				var_dump("this are in the sql function ".$this->table ,$this->column,$this->input,$this->id);
+			$sql = 'UPDATE '.$this->table.' SET '.$this->column.' = " '.$this->input.' " WHERE id = " '.$this->id.' " ';
+
+			echo "</br> </br>from sql class</br>";
+			var_dump($sql);
+			echo "</br>";
+			if ($conn->query($sql) === TRUE){
+				echo "The column $this->column has been altered to reflect the new value of $this->input ";
+
+			}else {
+				echo "The update failed ".$conn->error;
 			}
+
+		}	
+
+	
+
+
+
+function del($table, $id ){
+
+		global $conn;
+		$this->table 	= $table;
+		$this->column 	= $column;
+		$this->input 	= $input; 
+		$this->id 		= $id;
+
+			$sql = 'DELETE FROM '.$this->table.' WHERE id = " '.$this->id.' " ' ;
+			echo "</br> from sql class</br>";
+			var_dump($sql);
+			echo "</br>";
+			if ($conn->query($sql) === TRUE){
+				echo "The ID  $this->id has been delted from $this->table ";
+
+			}else {
+				echo "The Delete failed ".$conn->error;
+			}	
+
 		}
 
 
 
 
-}
+
+
+	}
 
 
 

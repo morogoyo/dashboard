@@ -1,12 +1,11 @@
 
-<div><?php 
- 		if (basename(__FILE__,'.php') == "index.php"){
- 			var_dump(basename(__FILE__,'.php'));
- 			echo "Footer division";
- 		}else{
+<div>
+<?php 
+ 		
  			echo "<a class='text-center' href='../index.php'>HOME</A> ";
- 		}
+ 		
 ?></div>
+<?php var_dump(basename(__FILE__)); ?>
 <div><a href="https://bootswatch.com/superhero/" target="_blank">Template details</a></div>
 </body>
 </html>

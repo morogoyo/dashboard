@@ -1,8 +1,10 @@
 <?php
+		include('../classes/class.pulse.php');
 		include('../classes/class.sql.php');
   		include('../classes/class.forms.php');
   		include('../include/header.php');
 
+  		// include('../include/leftNav.php');
 					
 			?>		
 
@@ -15,9 +17,8 @@
 						$sql = new Sql();
 						$form->enter_acronym_form();
 						$sql->insert_acronyms();
-						if (isset($_GET['acronymTable'])){
-						$sql->select('acronym'); 
-						}
+						
+    					$sql->select('acronym');
 						?>
 							
 			

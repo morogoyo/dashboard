@@ -1,7 +1,9 @@
 <?php
+		include('../classes/class.pulse.php');
 		include('../classes/class.sql.php');
   		include('../classes/class.forms.php');
   		include('../include/header.php');
+  		// include('../include/leftNav.php');
   		
 					
 	?>		<div class="center-block"><h3>Websites </h3></div>
@@ -13,9 +15,7 @@
 						$sql = new Sql();
 						$form->enter_form();					
 						$sql->insert();
-						// if (isset($_GET['websiteTable'])){
 						$sql->select('websites');
-						// }
 						?>
   			
 			</div>

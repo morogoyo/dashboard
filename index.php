@@ -1,11 +1,19 @@
-<?php include("include/initScript.php"); ?>
+<?php 
+include("include/initScript.php"); 
+include('classes/class.pulse.php');
+include("./classes/class.sql.php");
+
+    
+?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <title>LMS Tools</title>
   <meta charset="utf-8">
- 
+  <meta http-equiv='cache-control' content='no-cache'>
+  <meta http-equiv='expires' content='0'>
+  <meta http-equiv='pragma' content='no-cache'>
 
   
   <?php include("include/header.php"); ?>
@@ -51,34 +59,53 @@
 <!-- for future use   -->
 
       <div class="row">
-      <div class="col-sm-12">
+      <div class="col-sm-6">
           <div class="well">
             <!-- Display acronims  -->
           <div ng-controller='acronyms' > <h3>Acronyms</h3>
-<!-- the plus icon  -->
-          <p><a href="forms/acronymform.php" class="btn btn-info btn-lg">
-          <span class="glyphicon glyphicon-plus"></span> Plus 
-        </a></p>
-<!-- end of plus icon -->          
-          <input type="text" name="acrofilter" ng-model = "acro">
+<!-- start icon  -->
+          <div class="row">
+          <div class="col-sm-4">
+          <div><a href="forms/acronymform.php" class="col-sm-6 btn btn-info btn-xs ">
+          <span class="glyphicon glyphicon-plus "></span> Add 
+        </a></div>
+ 
+          <div><a href="forms/acronymform.php" class="col-sm-6 btn btn-info btn-xs btn-danger">
+          <span class="glyphicon glyphicon-minus"></span> Remove</a>
+          </div> 
+        </div> 
+        </div>
+<!-- end of  icons --> 
+           <div>  
+          <input  type="text" name="acrofilter" ng-model = "acro">
+          </div>
+
           <ul>      
-            <li ng-repeat ="x in acronym | filter : acro"  ><a href="file://{{x.address}}" target="_blank">{{x.acronym}}&nbsp;&nbsp;{{x.word}}</a></li>     
+            <li ng-repeat ="x in acronym | filter : acro"  ><a href="file://{{x.address}}" target="_blank">{{x.id}}&nbsp;&nbsp;&nbsp;&nbsp;{{x.acronym}}&nbsp;&nbsp;{{x.word}}</a></li>     
           </ul>
         </div>
          </div>
           </div>
-
+            
         <div class="col-sm-6">
           <div class="well">
           <div ng-controller='sites' > <h3 >Web Resources</h3>
-<!-- the plus icon  -->
-          <p><a href="forms/webform.php" class="btn btn-info btn-lg">
-          <span class="glyphicon glyphicon-plus"></span> Plus 
-        </a></p>
-<!-- end of plus icon -->
+<!-- start icon  -->
+          <div class="row">
+          <div class="col-sm-4">
+          <div><a href="forms/webform.php" class="col-sm-6 btn btn-info btn-xs ">
+          <span class="glyphicon glyphicon-plus "></span> Add 
+        </a></div>
+ 
+          <div><a href="forms/webform.php" class="col-sm-6 btn btn-info btn-xs btn-danger">
+          <span class="glyphicon glyphicon-minus"></span> Remove
+        </a></div> 
+        </div> 
+        </div>
+<!-- end of  icons --> 
             <input type="text" name="websitefilter" ng-model = "web">
             <ul>      
-              <li ng-repeat ="x in sites | filter : web"><a href="http://{{x.address}}" target="_blank">{{x.name}}&nbsp;&nbsp;{{x.type}}</a></li></ul>
+              <li ng-repeat ="x in sites | filter : web"><a href="http://{{x.address}}" target="_blank">{{x.id}}&nbsp;&nbsp;&nbsp;&nbsp;{{x.name}}&nbsp;&nbsp;{{x.type}}</a></li></ul>
           </div>
           </div>
         </div>
@@ -101,4 +128,9 @@
   </div>
 </div>
 
-<?php include('include/footer.php');?>
+<?php
+    $sql_init = new Sql();
+    $sql_init->select('websites');
+    $sql_init->select('acronym');
+
+ include('include/footer.php');?>
