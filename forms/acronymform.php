@@ -8,7 +8,7 @@
 					
 			?>		
 
-				<div class="center-block"><h3>Websites </h3></div>
+				<div class="center-block"><h3>Acronyms</h3></div>
 			<div class="panel panel-danger span4 center" >
 			<div class=" panel-heading   "> 
 			<div class="panel-body">

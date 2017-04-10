@@ -2,7 +2,9 @@
 include("include/initScript.php"); 
 include('classes/class.pulse.php');
 include("./classes/class.sql.php");
-
+    $sql_init = New Sql();
+    $sql_init->select('websites');
+    $sql_init->select('acronym');
     
 ?>
 
@@ -23,7 +25,7 @@ include("./classes/class.sql.php");
 
 
 <?php include ('include/leftNav.php'); ?>
-    
+    <!--  -->
     <div class="col-sm-9">
       <div class="well">
         <h4>Dashboard</h4>
@@ -70,26 +72,45 @@ include("./classes/class.sql.php");
           <span class="glyphicon glyphicon-plus "></span> Add 
         </a></div>
  
-          <div><a href="forms/acronymform.php" class="col-sm-6 btn btn-info btn-xs btn-danger">
+          <div><a href="forms/update.php" class="col-sm-6 btn btn-info btn-xs btn-danger">
           <span class="glyphicon glyphicon-minus"></span> Remove</a>
           </div> 
         </div> 
         </div>
 <!-- end of  icons --> 
            <div>  
-          <input  type="text" name="acrofilter" ng-model = "acro">
+          <input  type="text" name="acrofilter" ng-model = "acro"><button type="button" id="clearFilter" class="btn btn-danger" ng-click="clearFilter()">Clear</button>
           </div>
-
-          <ul>      
-            <li ng-repeat ="x in acronym | filter : acro"  ><a href="file://{{x.address}}" target="_blank">{{x.id}}&nbsp;&nbsp;&nbsp;&nbsp;{{x.acronym}}&nbsp;&nbsp;{{x.word}}</a></li>     
-          </ul>
+          <!-- acro table start -->
+          <table class="table table-responsive">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Acronym</th>
+                <th>Words</th>
+               
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat ="x in acronym | filter : acro">
+                <td>{{x.id}}</td>
+                <td>{{x.acronym}}</td>
+                <td>{{x.word}}</td>
+                
+              </tr>
+              
+            </tbody>
+          </table>
+          
+          <!-- acro table finish -->
         </div>
          </div>
           </div>
             
         <div class="col-sm-6">
           <div class="well">
-          <div ng-controller='sites' > <h3 >Web Resources</h3>
+          <div ng-controller='sites' > 
+          <h3 >{{test}}Web Resources</h3>
 <!-- start icon  -->
           <div class="row">
           <div class="col-sm-4">
@@ -97,28 +118,51 @@ include("./classes/class.sql.php");
           <span class="glyphicon glyphicon-plus "></span> Add 
         </a></div>
  
-          <div><a href="forms/webform.php" class="col-sm-6 btn btn-info btn-xs btn-danger">
+          <div><a href="forms/update.php" class="col-sm-6 btn btn-info btn-xs btn-danger">
           <span class="glyphicon glyphicon-minus"></span> Remove
         </a></div> 
         </div> 
         </div>
 <!-- end of  icons --> 
-            <input type="text" name="websitefilter" ng-model = "web">
-            <ul>      
-              <li ng-repeat ="x in sites | filter : web"><a href="http://{{x.address}}" target="_blank">{{x.id}}&nbsp;&nbsp;&nbsp;&nbsp;{{x.name}}&nbsp;&nbsp;{{x.type}}</a></li></ul>
+            <input type="text" name="websitefilter" ng-model = "web"><input type="button" id="clearFilter" value="clear" 
+            class="btn btn-danger"  ng-click = 'clearFilter()'>
+            <!-- this is a directive to show a form on the front end -->
+            <!-- <test></test> -->
+            <!-- web table start -->
+            <table class="table table-responsive table-hover">
+              <thead>
+                <tr>
+                  <th>ID </th>
+                  <th>NAME/ADDRESS</th>
+                  <th>ASSET TYPE</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat ="x in sites | orderBy:'name' | filter : web">
+                  <td>{{x.id }}</td>
+                  <td><a href="{{x.address}}" target="_blank">{{x.name }}</a></td>
+                  <td>{{x.type}}</td>
+                 
+                </tr>
+                
+              </tbody>
+            </table>
+            <!-- web table end -->
+            
           </div>
           </div>
         </div>
         
         
-      </div>
+      </div> 
       <div class="row">
         <div class="col-sm-8">
           <div class="well">
             <p>Todo </p> 
           </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-4"> 
           <div class="well">
             <p>Done</p> 
           </div>
@@ -129,8 +173,10 @@ include("./classes/class.sql.php");
 </div>
 
 <?php
-    $sql_init = new Sql();
-    $sql_init->select('websites');
-    $sql_init->select('acronym');
+   
 
- include('include/footer.php');?>
+ include('include/footer.php');
+
+
+
+ ?>

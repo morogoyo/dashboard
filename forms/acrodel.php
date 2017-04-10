@@ -27,7 +27,7 @@
 		echo "</br>";
 		var_dump($id,$column,$input,$table);
 		$form->del();
-		$sql->del($table, $column, $input, $id);
+		$sql->del($table,  $id);
 	?>
 	</div>
 

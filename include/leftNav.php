@@ -3,6 +3,7 @@
 
 $webform = "forms/webform.php";
 $acronymform ="forms/acronymform.php";
+$teams = "teams.php"
 ?>
 
 
@@ -19,10 +20,12 @@ $acronymform ="forms/acronymform.php";
       <a class="navbar-brand" href="#"><img src="img/logo.png" alt="placeholder+image"></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">        
+      <ul class="nav navbar-nav">  
+      <li><?php echo memory_get_peak_usage(true); ?></li>    
       	<li class="active"><a href="#section1">Dashboard</a></li>
         <li class="active"><a href="<?php echo $webform; ?>">Web Resourse Admin</a></li>
         <li class="active"><a href="<?php echo $acronymform;?>">Acronym Resourse Admin</a></li>
+        <li class="active"><a href="<?php echo $teams;?>">Trident Teams</a></li>
       </ul>
     </div>
   </div>
@@ -33,9 +36,11 @@ $acronymform ="forms/acronymform.php";
     <div class="col-sm-3 sidenav hidden-xs">
       <h2><img src="img/logo.png" alt="placeholder+image"></h2>
       <ul class="nav nav-pills nav-stacked">
+      <li><?php echo memory_get_peak_usage(true) /1000000 .'Mb'; ?></li>  
          <li class="active"><a href="#section1">Dashboard</a></li>
         <li class="active"><a href="<?php echo $webform; ?>">Web Resourse Admin</a></li>
         <li class="active"><a href="<?php echo $acronymform;?>">Acronym Resourse Admin</a></li>
+        <li class="active"><a href="<?php echo $teams;?>">Trident Teams</a></li>
         <!-- <li class="active"><a href="#section3">Geo</a></li> -->
       </ul><br>
     </div>

@@ -59,68 +59,56 @@ class Form{
 	}
 
 
-	function webChange(){
+	function Change(){
 		include('../include/header.php');
-		$webdel_form .= '<form action="" method="get">';
-		$webdel_form .= '<div class="form-group ">';
-		$webdel_form .= '<div>';
-		$webdel_form .=	'<label for="name">ID:</label>';
-		$webdel_form .=	'<input type="text" name="id" id="name" value="" tabindex="1" />';
-		$webdel_form .= '</div>';
-		$webdel_form .=	'<div>';
-		$webdel_form .= '<label for="input">Change</label>';
-		$webdel_form .=	'<input type="text" name="input" id="change" value="" tabindex="1" />';
-		$webdel_form .= '</div>';
-		$webdel_form .=	'<div>';
-		$webdel_form .= '<label for="select-choice">Column to change </label>';
-		$webdel_form .=	'<select name="column" id="select-choice">';
-		$webdel_form .=	'<option value="name">Name</option>';
-		$webdel_form .=	'<option value="descrip">Description</option>';
-		$webdel_form .=	'<option value="address">Web Address</option>';
-		$webdel_form .=	'</select>';
-		$webdel_form .= '</div>';
-		$webdel_form .= '<div>';
-		$webdel_form .=	'<input type="submit" value="Submit" />';
-		$webdel_form .= '</div>';
-		$webdel_form .= '</form>';
+		$change_form .= '<form action="" method="get">';
+		$change_form .= '<div class="form-group ">';
+		$change_form .= '<div>';
+		$change_form .=	'<label for="name">ID:</label>';
+		$change_form .=	'<input type="text" name="id" id="name" value="" tabindex="1" />';
+		$change_form .= '</div>';
+		$change_form .=	'<div>';
+				
 
-		   echo $webdel_form;
+
+
+
+		$change_form .= '<label for="input">Change</label>';
+		$change_form .=	'<input type="text" name="input" id="change" value="" tabindex="1" />';
+		$change_form .= '</div>';
+		$change_form .=	'<div>';
+		$change_form .= '<label for="table-choice">Table to update</label>';
+		$change_form .=	'<select name="table" id="table-choice">';
+		$change_form .=	'<option value="websites">Websites</option>';
+		$change_form .=	'<option value="acronym">Acronims</option>';
+		// $change_form .=	'<option value="address">Web Address</option>';
+		$change_form .=	'</select>';
+		$change_form .= '</div>';
+		$change_form .=	'<div>';
+		$change_form .= '<label for="select-choice">Column to update </label>';
+		$change_form .=	'<select name="column" id="select-choice">';
+		$change_form .=	'<option value="name">Name</option>';
+		$change_form .=	'<option value="descrip">Description</option>';
+		$change_form .=	'<option value="address">Web Address</option>';
+		$change_form .=	'</select>';
+		$change_form .= '</div>';
+		$change_form .= '<div>';
+		$change_form .=	'<input type="submit" value="Submit" />';
+		$change_form .= '</div>';
+		$change_form .= '</form>';
+
+		   echo $change_form;
 
 
 		}
 
 
 
-	function acroChange(){
-		include('../include/header.php');
-		$acrodel_form .= '<form action="" method="get">';
-		$acrodel_form .= '<div class="form-group ">';
-		$acrodel_form .= '<div>';
-		$acrodel_form .= '<label for="id">ID</label>';
-		$acrodel_form .= '<input type="text" name="id" id="name" value="" tabindex="1" />';
-		$acrodel_form .= '</div>';
-		$acrodel_form .= '<div>';
-		$acrodel_form .= '<label for="input">Change</label>';
-		$acrodel_form .= '<input type="text" name="input" id="change" value="" tabindex="1" />';
-		$acrodel_form .= '</div>';
-		$acrodel_form .= '<div>';
-		$acrodel_form .= '<label for="select-choice">Column to change </label>';
-		$acrodel_form .= '<select name="column" id="column">';
-		$acrodel_form .= '<option value="acronym">Acronym</option>';
-		$acrodel_form .= '<option value="word">Word</option>';
-		$acrodel_form .= '<option value="description">Description</option>';
-		$acrodel_form .= '</select>';
-		$acrodel_form .= '</div>';
-		$acrodel_form .= '<div>';
-		$acrodel_form .= '<input type="submit" value="Submit" />';
-		$acrodel_form .= '</div>';
-		$acrodel_form .= '</form>';
+	
 
 
 
-		echo $acrodel_form;
-
-	}	
+		
 
 
 

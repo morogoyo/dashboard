@@ -19,13 +19,13 @@
 		$id = $_GET['id'];
 		$column =$_GET['column'];
 		$input = $_GET['input'];
-		$table = 'websites';
+		$table = $_GET['table'];
 		$form = New Form();
 		$form->webChange();
 		$sql = New Sql();
 		$sql->update_sql($table, $column, $input, $id );
-		$form->webdel();
-		$sql->del($table, $column, $input, $id );
+		$form->del();
+		$sql->del($table, $id );
 
 
 	?>
