@@ -22,7 +22,7 @@ $teams = "teams.php"
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">  
       <li><?php echo memory_get_peak_usage(true); ?></li>    
-      	<li class="active"><a href="#section1">Dashboard</a></li>
+      	<li class="active"><a href="dashboard/index.php">Dashboard</a></li>
         <li class="active"><a href="<?php echo $webform; ?>">Web Resourse Admin</a></li>
         <li class="active"><a href="<?php echo $acronymform;?>">Acronym Resourse Admin</a></li>
         <li class="active"><a href="<?php echo $teams;?>">Trident Teams</a></li>
@@ -37,7 +37,7 @@ $teams = "teams.php"
       <h2><img src="img/logo.png" alt="placeholder+image"></h2>
       <ul class="nav nav-pills nav-stacked">
       <li><?php echo memory_get_peak_usage(true) /1000000 .'Mb'; ?></li>  
-         <li class="active"><a href="#section1">Dashboard</a></li>
+         <li class="active"><a href="index.php">Dashboard</a></li>
         <li class="active"><a href="<?php echo $webform; ?>">Web Resourse Admin</a></li>
         <li class="active"><a href="<?php echo $acronymform;?>">Acronym Resourse Admin</a></li>
         <li class="active"><a href="<?php echo $teams;?>">Trident Teams</a></li>

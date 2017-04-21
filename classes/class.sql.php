@@ -9,7 +9,7 @@ class Sql {
 	$this->table = $table;
 	$array_json = array();
 	$sql_select = " SELECT * FROM ".$this->table ;
-	var_dump($sql);
+	// var_dump($sql);
 	$result = $conn->query($sql_select);
 			
 		if ($result->num_rows > 0){
@@ -188,19 +188,26 @@ function teams_display(){
 		
 		}
 
+function release_time_line(){
+		global $conn;
+		$release_array = array();
+		$sql = "SELECT * FROM release_schedule";
+
+		$time_line = $conn->query($sql);
+
+		if ($time_line->num_rows > 0 ){
+			while ($line = $time_line->fetch_all(MYSQLI_ASSOC)) {
+				$release_array = $line;
+			}
+			
+		}
+			
+		$release_file = fopen("stream/release_management.txt", "w");
+
+		fwrite($release_file,'{"release":'.json_encode($release_array).'}');
 
 
-
-		
-
-
-
-
-
-
-
-
-
+		}
 
 
 }
