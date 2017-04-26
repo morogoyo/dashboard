@@ -27,37 +27,26 @@ include("./classes/class.sql.php");
 
 
 <?php include ('includes/leftNav.php'); ?>
-    <!--  -->
-
-    <hr>
-    <div>
-      <button onclick="toggleTeam()">Big freaking button</button>
-    </div>
-    <div id="test">
-    <p>this is not hidden</p>
-    </div>
-  <hr>
-
-  <!--  -->
-    <div class="col-sm-9">
+   
+    <!-- <div class="col-sm-9">
       <div class="well">
         <h4>Dashboard</h4>
         <p>Some text...</p>
-      </div>
+      </div> -->
       
-      <div id='releases'>
+      <div  id="release" ng-show="show == 1">
       <release></release>
       </div>
 
-      <div id='team'>
+      <div id='team' ng-show="show == 2">
       <teams ></teams>
       </div>      
 
-      <div id='acro'>
+      <div id='acro' ng-show="show == 3">
       <acronym></acronym>
       </div>
 
-      <div id='web'>
+      <div id='web' ng-show="show == 4">
       <websites></websites>
       </div>
             
@@ -82,54 +71,7 @@ include("./classes/class.sql.php");
 </div>
 <hr><hr>
 
-<!-- release page  -->
 
-<!-- <div><label>  Search</label>
-<input type="ng-submit=" ng-model="search.release , search.first_sprint ,search.second_sprint" />   </div>
-<div  class="col-lg-9" ng-controller="releaseCtrl">
-    
-<table class=" table table-responsive table-striped table-bordered table-hover table-condensed">
-    <thead>
-      <tr>
-
-        <th>RELEASE</th>
-        <th>Planning Start</th>       
-        <th>Planning End</th>
-        <th>Sprint #1</th>
-        <th>Sprint Start</th>
-        <th>Sprint End</th>       
-        <th>Sprint #2</th>
-        <th>Sprint 1 Start</th>
-        <th>Sprint 2 End</th>
-        <th>END TO END TESTING Start</th>
-        <th>END TO END TESTING End</th> 
-          
-      </tr>
-    </thead>
-    <tbody>
-      <tr ng-repeat=" r in release | filter:search ">
-        <!-- | filter : teams -->
-       <!-- <td>{{r.release}}</td>
-        <td>{{r.release_planning_start}}</td>
-        <td>{{r.release_planning_end}}</td>
-        <td>{{r.first_sprint}}</td>
-        <td>{{r.first_sprint_start}}</td>
-        <td>{{r.firts_sprint_end}}</td>
-        <td>{{r.second_sprint}}</td>
-        <td>{{r.second_sprint_start}}</td>
-        <td>{{r.second_sprit_end}}</td>
-        <td>{{r.ete_start}}</td>
-        <td>{{r.ete_end}}</td>
-        
-        
-      </tr>
-      
-    </tbody>
-  </table>
-</div> -->
-
-  
-<!-- end release page -->
 <?php
    
 

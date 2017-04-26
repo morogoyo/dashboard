@@ -41,14 +41,17 @@ $teams = "teams.php"
       <h2><img src="img/logo.png" alt="placeholder+image"></h2>
       <ul class="nav nav-pills nav-stacked">
       <li><?php echo memory_get_peak_usage(true) /1000000 .'Mb'; ?></li>  
-         <li class="active"><a href="index.php">Dashboard1234</a></li>
+        <li class="active"><a href="index.php">Dashboard</a></li>
         <li class="active"><a href="<?php echo $webform; ?>">Web Resourse Admin</a></li>
         <li class="active"><a href="<?php echo $acronymform;?>">Acronym Resourse Admin</a></li>
-        <li class="active"><a href="">Web Resourse</a></li>
-        <li class="active"><a href="">Acronyms</a></li>
-        <li class="active" onclick="toggleTeam()"><a href="">Trident Teams</a></li>
-        <li class="active" onclick="toggleRelease()"><a href="">Release Schedule</a></li>
-        <li class="active"><a href="">Release Schedule</a></li>
+        <li class="active"><input class="btn btn-primary" type="button" ng-click="show=4" value="Web Resourse"  ng-model ="release"></li>
+        <li class="active"><input class="btn btn-primary" type="button" ng-click="show=3" value="Acronyms"  ng-model ="release"></li>
+        <li class="active" ><input class="btn btn-primary" type="button" ng-click="show=2" value="Trident Teams" ng-model ="release"></li>
+        <li class="active" ><input class="btn btn-primary" type="button" ng-click="show=1" value="Release Schedule" ng-model ="release"> </li>
+        <!-- <li class="active" ><input class="btn btn-primary" type="button" ng-click= value ="release" ng-model ="release">Release Schedule</li>
+        <li class="active" ><input class="btn btn-primary" type="button" ng-click= value ="release" ng-model ="release">Release Schedule</li>
+        <li class="active" ><input class="btn btn-primary" type="button" ng-click= value ="release" ng-model ="release">Release Schedule</li>
+         <li class="active" ><input class="btn btn-primary" type="button" ng-click= value ="release" ng-model ="release"></li> -->
         <!-- <li class="active">Trident Teams</li>
         <li class="active">Trident Teams</li>
         <li  class="active">Trident Teams</li>-->
