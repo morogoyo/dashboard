@@ -61,12 +61,7 @@ app.controller('acronyms', function ($scope,$http) {
 
 
 
-app.directive("team", function() {
 
-    return {
-        templateUrl : 'forms/webform.php'
-    };
-});
 
 
 app.controller('teams', function ($scope,$http) {
@@ -110,4 +105,39 @@ app.controller('releaseCtrl',  function ($scope,$http) {
 			console.log($scope.release);
 	});
 	
+});
+
+
+app.directive("release", function () {
+	return {
+		restrict: 'E',
+		templateUrl : 'template/releases.php'
+	};
+});
+
+
+app.directive("teams", function() {
+
+    return {
+    	restrict: 'E',
+        templateUrl : 'template/teams.php'
+    };
+});
+
+
+app.directive("acronym", function() {
+
+    return {
+    	restrict: 'E',
+        templateUrl : 'template/acronyms.php'
+    };
+});
+
+
+app.directive("websites", function() {
+
+    return {
+    	restrict: 'E',
+        templateUrl : 'template/websites.php'
+    };
 });

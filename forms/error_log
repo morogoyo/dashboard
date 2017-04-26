@@ -206,3 +206,39 @@
 [07-Apr-2017 16:32:06 America/New_York] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /home/lmsacces/public_html/dashboard/classes/class.sql.php on line 26
 [07-Apr-2017 16:33:33 America/New_York] PHP Fatal error:  Using $this when not in object context in /home/lmsacces/public_html/dashboard/classes/class.sql.php on line 9
 [07-Apr-2017 16:33:38 America/New_York] PHP Fatal error:  Using $this when not in object context in /home/lmsacces/public_html/dashboard/classes/class.sql.php on line 9
+[11-Apr-2017 09:38:43 America/New_York] PHP Warning:  fopen(stream/websites.txt): failed to open stream: No such file or directory in /home/lmsacces/public_html/dashboard/classes/class.sql.php on line 24
+[11-Apr-2017 09:38:43 America/New_York] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /home/lmsacces/public_html/dashboard/classes/class.sql.php on line 26
+[11-Apr-2017 09:40:02 America/New_York] PHP Warning:  fopen(stream/websites.txt): failed to open stream: No such file or directory in /home/lmsacces/public_html/dashboard/classes/class.sql.php on line 24
+[11-Apr-2017 09:40:02 America/New_York] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /home/lmsacces/public_html/dashboard/classes/class.sql.php on line 26
+[14-Apr-2017 14:58:24 America/New_York] PHP Warning:  fopen(stream/websites.txt): failed to open stream: No such file or directory in /home/lmsacces/public_html/dashboard/classes/class.sql.php on line 24
+[14-Apr-2017 14:58:24 America/New_York] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /home/lmsacces/public_html/dashboard/classes/class.sql.php on line 26
+[18-Apr-2017 07:51:31 America/New_York] PHP Warning:  fopen(stream/websites.txt): failed to open stream: No such file or directory in /home/lmsacces/public_html/dashboard/classes/class.sql.php on line 24
+[18-Apr-2017 07:51:31 America/New_York] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /home/lmsacces/public_html/dashboard/classes/class.sql.php on line 26
+[18-Apr-2017 07:52:46 America/New_York] PHP Warning:  fopen(stream/websites.txt): failed to open stream: No such file or directory in /home/lmsacces/public_html/dashboard/classes/class.sql.php on line 24
+[18-Apr-2017 07:52:46 America/New_York] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /home/lmsacces/public_html/dashboard/classes/class.sql.php on line 26
+[18-Apr-2017 14:18:50 America/New_York] PHP Warning:  fopen(stream/websites.txt): failed to open stream: No such file or directory in /home/lmsacces/public_html/dashboard/classes/class.sql.php on line 24
+[18-Apr-2017 14:18:50 America/New_York] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /home/lmsacces/public_html/dashboard/classes/class.sql.php on line 26
+[18-Apr-2017 14:32:18 America/New_York] PHP Warning:  fopen(stream/websites.txt): failed to open stream: No such file or directory in /home/lmsacces/public_html/dashboard/classes/class.sql.php on line 24
+[18-Apr-2017 14:32:18 America/New_York] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /home/lmsacces/public_html/dashboard/classes/class.sql.php on line 26
+[18-Apr-2017 16:49:29 America/New_York] PHP Warning:  fopen(stream/websites.txt): failed to open stream: No such file or directory in /home/lmsacces/public_html/dashboard/classes/class.sql.php on line 24
+[18-Apr-2017 16:49:29 America/New_York] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /home/lmsacces/public_html/dashboard/classes/class.sql.php on line 26
+[18-Apr-2017 16:50:14 America/New_York] PHP Warning:  fopen(stream/websites.txt): failed to open stream: No such file or directory in /home/lmsacces/public_html/dashboard/classes/class.sql.php on line 24
+[18-Apr-2017 16:50:14 America/New_York] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /home/lmsacces/public_html/dashboard/classes/class.sql.php on line 26
+[18-Apr-2017 16:50:21 America/New_York] PHP Warning:  fopen(stream/websites.txt): failed to open stream: No such file or directory in /home/lmsacces/public_html/dashboard/classes/class.sql.php on line 24
+[18-Apr-2017 16:50:21 America/New_York] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /home/lmsacces/public_html/dashboard/classes/class.sql.php on line 26
+[18-Apr-2017 16:50:22 America/New_York] PHP Warning:  fopen(stream/websites.txt): failed to open stream: No such file or directory in /home/lmsacces/public_html/dashboard/classes/class.sql.php on line 24
+[18-Apr-2017 16:50:22 America/New_York] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /home/lmsacces/public_html/dashboard/classes/class.sql.php on line 26
+[18-Apr-2017 16:50:22 America/New_York] PHP Warning:  fopen(stream/websites.txt): failed to open stream: No such file or directory in /home/lmsacces/public_html/dashboard/classes/class.sql.php on line 24
+[18-Apr-2017 16:50:22 America/New_York] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /home/lmsacces/public_html/dashboard/classes/class.sql.php on line 26
+[18-Apr-2017 16:50:23 America/New_York] PHP Warning:  fopen(stream/websites.txt): failed to open stream: No such file or directory in /home/lmsacces/public_html/dashboard/classes/class.sql.php on line 24
+[18-Apr-2017 16:50:23 America/New_York] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /home/lmsacces/public_html/dashboard/classes/class.sql.php on line 26
+[18-Apr-2017 17:54:44 America/New_York] PHP Warning:  fopen(stream/websites.txt): failed to open stream: No such file or directory in /home/lmsacces/public_html/dashboard/classes/class.sql.php on line 24
+[18-Apr-2017 17:54:44 America/New_York] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /home/lmsacces/public_html/dashboard/classes/class.sql.php on line 26
+[18-Apr-2017 17:55:31 America/New_York] PHP Warning:  fopen(stream/websites.txt): failed to open stream: No such file or directory in /home/lmsacces/public_html/dashboard/classes/class.sql.php on line 24
+[18-Apr-2017 17:55:31 America/New_York] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /home/lmsacces/public_html/dashboard/classes/class.sql.php on line 26
+[18-Apr-2017 17:55:46 America/New_York] PHP Warning:  fopen(stream/websites.txt): failed to open stream: No such file or directory in /home/lmsacces/public_html/dashboard/classes/class.sql.php on line 24
+[18-Apr-2017 17:55:46 America/New_York] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /home/lmsacces/public_html/dashboard/classes/class.sql.php on line 26
+[19-Apr-2017 10:01:28 America/New_York] PHP Warning:  fopen(stream/websites.txt): failed to open stream: No such file or directory in /home/lmsacces/public_html/dashboard/classes/class.sql.php on line 24
+[19-Apr-2017 10:01:28 America/New_York] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /home/lmsacces/public_html/dashboard/classes/class.sql.php on line 26
+[24-Apr-2017 12:10:33 America/New_York] PHP Warning:  fopen(stream/acronym.txt): failed to open stream: No such file or directory in /home/lmsacces/public_html/dashboard/classes/class.sql.php on line 24
+[24-Apr-2017 12:10:33 America/New_York] PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /home/lmsacces/public_html/dashboard/classes/class.sql.php on line 26

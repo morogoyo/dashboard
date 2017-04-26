@@ -19,142 +19,49 @@ include("./classes/class.sql.php");
   <meta http-equiv='expires' content='0'>
   <meta http-equiv='pragma' content='no-cache'>
 
-  
-  <?php include("include/header.php"); ?>
+ 
+  <?php include("includes/header.php"); ?>
   
 </head>
   <body ng-app="lmsTools">    
 
 
-<?php include ('include/leftNav.php'); ?>
+<?php include ('includes/leftNav.php'); ?>
     <!--  -->
+
+    <hr>
+    <div>
+      <button onclick="toggleTeam()">Big freaking button</button>
+    </div>
+    <div id="test">
+    <p>this is not hidden</p>
+    </div>
+  <hr>
+
+  <!--  -->
     <div class="col-sm-9">
       <div class="well">
         <h4>Dashboard</h4>
         <p>Some text...</p>
       </div>
-<!-- for future use   -->
-      <!-- <div class="row">
-        <div class="col-sm-3">
-          <div class="well">
-            <h4>Users</h4>
-            <p>1 Million</p> 
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="well">
-            <h4>Pages</h4>
-            <p>100 Million</p> 
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="well">
-            <h4>Sessions</h4>
-            <p>10 Million</p> 
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="well">
-            <h4>Bounce</h4>
-            <p>30%</p> 
-          </div>
-        </div>
-      </div> -->
-<!-- for future use   -->
+      
+      <div id='releases'>
+      <release></release>
+      </div>
 
-      <div class="row">
-      <div class="col-sm-6">
-          <div class="well">
-            <!-- Display acronims  -->
-          <div ng-controller='acronyms' > <h3>Acronyms</h3>
-<!-- start icon  -->
-          <div class="row">
-          <div class="col-sm-4">
-          <div><a href="forms/acronymform.php" class="col-sm-6 btn btn-info btn-xs ">
-          <span class="glyphicon glyphicon-plus "></span> Add 
-        </a></div>
- 
-          <div><a href="forms/update.php" class="col-sm-6 btn btn-info btn-xs btn-danger">
-          <span class="glyphicon glyphicon-minus"></span> Remove</a>
-          </div> 
-        </div> 
-        </div>
-<!-- end of  icons --> 
-           <div>  
-          <input  type="text" name="acrofilter" ng-model = "acro"><button type="button" id="clearFilter" class="btn btn-danger" ng-click="clearFilter()">Clear</button>
-          </div>
-          <!-- acro table start -->
-          <table class="table table-responsive">
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Acronym</th>
-                <th>Words</th>
-               
-              </tr>
-            </thead>
-            <tbody>
-              <tr ng-repeat ="x in acronym | filter : acro">
-                <td>{{x.id}}</td>
-                <td>{{x.acronym}}</td>
-                <td>{{x.word}}</td>
-                
-              </tr>
-              
-            </tbody>
-          </table>
-          
-          <!-- acro table finish -->
-        </div>
-         </div>
-          </div>
+      <div id='team'>
+      <teams ></teams>
+      </div>      
+
+      <div id='acro'>
+      <acronym></acronym>
+      </div>
+
+      <div id='web'>
+      <websites></websites>
+      </div>
             
-        <div class="col-sm-6">
-          <div class="well">
-          <div ng-controller='sites' > 
-          <h3 >{{test}}Web Resources</h3>
-<!-- start icon  -->
-          <div class="row">
-          <div class="col-sm-4">
-          <div><a href="forms/webform.php" class="col-sm-6 btn btn-info btn-xs ">
-          <span class="glyphicon glyphicon-plus "></span> Add 
-        </a></div>
- 
-          <div><a href="forms/update.php" class="col-sm-6 btn btn-info btn-xs btn-danger">
-          <span class="glyphicon glyphicon-minus"></span> Remove
-        </a></div> 
-        </div> 
-        </div>
-<!-- end of  icons --> 
-            <input type="text" name="websitefilter" ng-model = "web"><input type="button" id="clearFilter" value="clear" 
-            class="btn btn-danger"  ng-click = 'clearFilter()'>
-            <!-- this is a directive to show a form on the front end -->
-            <!-- <test></test> -->
-            <!-- web table start -->
-            <table class="table table-responsive table-hover">
-              <thead>
-                <tr>
-                  <th>ID </th>
-                  <th>NAME/ADDRESS</th>
-                  <th>ASSET TYPE</th>
-                  
-                </tr>
-              </thead>
-              <tbody>
-                <tr ng-repeat ="x in sites | orderBy:'name' | filter : web">
-                  <td>{{x.id }}</td>
-                  <td><a href="{{x.address}}" target="_blank">{{x.name }}</a></td>
-                  <td>{{x.type}}</td>
-                 
-                </tr>
-                
-              </tbody>
-            </table>
-            <!-- web table end -->
-            
-          </div>
-          </div>
-        </div>
+       
         
         
       </div> 
@@ -177,8 +84,8 @@ include("./classes/class.sql.php");
 
 <!-- release page  -->
 
-<div><label>  Search</label>
-<input type="ng-submit=" ng-model="search.$" />   </div>
+<!-- <div><label>  Search</label>
+<input type="ng-submit=" ng-model="search.release , search.first_sprint ,search.second_sprint" />   </div>
 <div  class="col-lg-9" ng-controller="releaseCtrl">
     
 <table class=" table table-responsive table-striped table-bordered table-hover table-condensed">
@@ -202,7 +109,7 @@ include("./classes/class.sql.php");
     <tbody>
       <tr ng-repeat=" r in release | filter:search ">
         <!-- | filter : teams -->
-        <td>{{r.release}}</td>
+       <!-- <td>{{r.release}}</td>
         <td>{{r.release_planning_start}}</td>
         <td>{{r.release_planning_end}}</td>
         <td>{{r.first_sprint}}</td>
@@ -219,12 +126,14 @@ include("./classes/class.sql.php");
       
     </tbody>
   </table>
-</div>
+</div> -->
+
+  
 <!-- end release page -->
 <?php
    
 
- include('include/footer.php');
+ include('includes/footer.php');
 
 
 
