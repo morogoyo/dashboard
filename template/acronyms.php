@@ -1,5 +1,5 @@
 
-      <div class="col-sm-9">
+      <div class="col-sm-8">
           <div class="well">
             <!-- Display acronims  -->
           <div ng-controller='acronyms' > <h3>Acronyms</h3>
@@ -20,7 +20,7 @@
           <input  type="text" name="acrofilter" ng-model = "acro"><button type="button" id="clearFilter" class="btn btn-danger" ng-click="clearFilter()">Clear</button>
           </div>
           <!-- acro table start -->
-          <table class="table table-responsive">
+          <table class="table table-responsive table-condensed table-hover table-striped table-responsive table-bordered">
             <thead>
               <tr>
                 <th>ID</th>

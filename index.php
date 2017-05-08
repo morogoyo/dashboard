@@ -6,6 +6,7 @@ include("./classes/class.sql.php");
     $sql_init->release_time_line();
     $sql_init->select('websites');
     $sql_init->select('acronym');
+    $sql_init->select('trident_teams');
     
     
 ?>
@@ -28,11 +29,18 @@ include("./classes/class.sql.php");
 
 <?php include ('includes/leftNav.php'); ?>
    
-    <!-- <div class="col-sm-9">
-      <div class="well">
-        <h4>Dashboard</h4>
-        <p>Some text...</p>
-      </div> -->
+      <div class="row">
+        <div class="col-sm-8" ng-init="show =0">
+          <!-- <div class="well">
+            <p>Todo </p> 
+          </div>
+        </div>
+        <div class="col-sm-4"> 
+          <div class="well">
+            <p>Done</p> 
+          </div> -->
+        </div>
+      
       
       <div  id="release" ng-show="show == 1">
       <release></release>
@@ -49,22 +57,16 @@ include("./classes/class.sql.php");
       <div id='web' ng-show="show == 4">
       <websites></websites>
       </div>
+
+      <div id='default' ng-show="show == 0">
+      <default></default>
+      </div>
             
-       
+       </div> 
         
         
-      </div> 
-      <div class="row">
-        <div class="col-sm-8">
-          <div class="well">
-            <p>Todo </p> 
-          </div>
-        </div>
-        <div class="col-sm-4"> 
-          <div class="well">
-            <p>Done</p> 
-          </div>
-        </div>
+      
+    
       </div>
     </div>
   </div>

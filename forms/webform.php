@@ -3,8 +3,8 @@
 		
   		include('../classes/class.forms.php');
   		include('../classes/class.sql.php');
-  		include('../include/header.php');
-  		include('../include/leftNav.php');
+  		include('../includes/header.php');
+  		include('../includes/leftNav.php');
   		
 					
 	?>		<div class="center-block"><h3>Websites </h3></div>
@@ -16,7 +16,7 @@
 						$sql_init = new Sql();
 						$form->enter_form();					
 						$sql_init->insert();
-						$sql_init->select('websites');
+						// $sql_init->select('websites');
 			?>
   			
 			</div>
@@ -24,4 +24,4 @@
 </div>
 </div>
 
-<div><?php include('../include/footer.php'); ?></div>
+<div><?php include('../includes/footer.php'); ?></div>

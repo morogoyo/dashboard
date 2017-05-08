@@ -1,4 +1,4 @@
- <div class="col-sm-9">
+ <div class="col-sm-8">
           <div class="well">
           <div ng-controller='sites' > 
           <h3 >Web Resources</h3>
@@ -20,7 +20,7 @@
             <!-- this is a directive to show a form on the front end -->
             <!-- <test></test> -->
             <!-- web table start -->
-            <table class="table table-responsive table-hover">
+            <table class="table table-responsive table-condensed table-hover table-striped table-responsive table-bordered">
               <thead>
                 <tr>
                   <th>ID </th>

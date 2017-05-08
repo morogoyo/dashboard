@@ -141,3 +141,12 @@ app.directive("websites", function() {
         templateUrl : 'template/websites.php'
     };
 });
+
+
+app.directive("default", function() {
+
+    return {
+    	restrict: 'E',
+        templateUrl : 'template/default.php'
+    };
+});

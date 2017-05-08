@@ -1,11 +1,11 @@
-<div class="col-sm-9">
+<div class="col-sm-8">
           <div class="well">
 
 <div><label>  Search</label>
 <input type="ng-submit=" ng-model="search.release" />   </div>
 <div   ng-controller="releaseCtrl">
     
-<table class=" table table-responsive table-striped table-bordered table-hover table-condensed">
+<table class="table table-responsive table-condensed table-hover table-striped table-responsive table-bordered">
     <thead>
       <tr>
 

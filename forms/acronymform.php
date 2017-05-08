@@ -9,7 +9,7 @@
 			?>		
 
 				<div class="center-block"><h3>Acronyms</h3></div>
-			<div class="panel panel-danger span4 center" >
+			<div class="panel panel-danger span4 center col-lg-6" >
 			<div class=" panel-heading   "> 
 			<div class="panel-body">
   					<?php  

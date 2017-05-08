@@ -33,7 +33,7 @@ class Sql {
 
 
 	function insert(){
-				 var_dump("These are the GET var dump  ".$_GET['descrip'],$_GET['name'],$_GET['type'],"</br>");
+				// var_dump("These are the GET var dump  ".$_GET['descrip'],$_GET['name'],$_GET['type'],"</br>");
 			
 			$this->address = $_GET['address'];
 			$this->descrip = $_GET['descrip'];
@@ -118,11 +118,11 @@ class Sql {
 				$this->column 	= $column;
 				$this->input 	= $input; 
 				$this->id 		= $id;
-						var_dump("this are in the sql function ".$this->table ,$this->column,$this->input,$this->id);
+						//var_dump("this are in the sql function ".$this->table ,$this->column,$this->input,$this->id);
 					$sql = 'UPDATE '.$this->table.' SET '.$this->column.' = " '.$this->input.' " WHERE id = " '.$this->id.' " ';
 
 					echo "</br> </br>from sql class</br>";
-					var_dump($sql);
+					//var_dump($sql);
 					echo "</br>";
 					if ($conn->query($sql) === TRUE){
 						echo "The column $this->column has been altered to reflect the new value of $this->input ";
@@ -147,7 +147,7 @@ class Sql {
 
 					$sql = 'DELETE FROM '.$this->table.' WHERE id = '.$this->id;
 					echo "</br> from sql class</br>";
-					var_dump($sql);
+					//var_dump($sql);
 					echo "</br>";
 					if ($conn->query($sql) === TRUE){
 						echo "The ID  $this->id has been delted from $this->table ";
